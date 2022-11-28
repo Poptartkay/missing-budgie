@@ -44,24 +44,66 @@ function generatePassword(){
     while(passwordlength < 8 || passwordLength > 128 ){
         passwordlength = prompt ("Please select a number between 8 and 128!");
 
-        if(passwordlength ===null){
-            return "Faliure to launch";  
-        }
-        else {
-            if(isFinite(passwordlength)){
-                alert("Please Select a number");
-                return "Failure to launch";
-            }
-            else{
-                if (passwordlength < 8 || passwordlength > 128){
-                    alert ("Create a password between 8-128 characters");
-                    return "Failure to launch";
+         if(passwordlength ===null){
+           return "Faliure to launch"; 
+         }
+         else {
+                 if(!isFinite(passwordlength)){
+                     alert("Please Select a number");
+                   return "Failure to launch";
+                 }
+                 else{
+                            if (passwordlength < 8 || passwordlength > 128){
+                                alert ("Create a password between 8-128 characters");
+                                return "Failure to launch";
+                            }
+                            else{
+                                            promptwindow();
+                                            while( pwdCriteria.pwdLength < passwordlength){
+                                                if (uppercase === false && lowercase === false && symbols === false && number === false){
+                                                    alert("Please select a number an uppercase and a special character");
+                                                    promptwindow();
+                                                }
+                                                else{
+                                                    if ( uppercase===true &&  pwdCriteria.pwdLength < passwordlength ) {
+                                                                        var upcase = pwdCriteria.pwdUppercase[Math.floor(Math.random()*26)]
+                                                                        result = result + upcase; 
+                                                                        pwdCriteria.pwdLength ++;
+                                                }
+                                                if    ( lowercase===true &&  pwdCriteria.pwdLength < passwordlength ) {
+                                                                        var lowcase = pwdCriteria.pwdLowercase[Math.floor(Math.random()*26)]
+                                                                        result = result + lowcase; 
+                                                                        pwdCriteria.pwdLength ++;
+                                            }
+                                            if ( number===true &&  pwdCriteria.pwdLength < passwordlength ) {
+                                                                            var num = pwdCriteria.pwdNumber[Math.floor(Math.random()*10)]
+                                                                            result = result + num; 
+                                                                            pwdCriteria.pwdLength ++;
+                        
+                                        } 
+                                        if    ( symbols===true &&  pwdCriteria.pwdLength < passwordlength ) {
+                                                                    var sym = pwdCriteria.pwdSymbols[Math.floor(Math.random()*11)]
+                                                                    result = result + sym; 
+                                                                    pwdCriteria.pwdLength ++;
+                                            
+                                    }
+                                }
+                            }
+                        }
+                    }
                 }
-                else{
-                    promptwindow();
+                return result;
+                
+                function promptwindow(){
+                     lowercase = confirm("Do you want to use lowercase?");
+                     uppercase = confirm("Do you want to use uppercase?");
+                     symbols = confirm("Do you want use symbols");
+                    number = confirm("Do you want to use numbers?");
                 }
+    
             }
-        }
-    }
+        
+                                                            
+      
 
 }
