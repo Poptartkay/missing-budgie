@@ -82,7 +82,7 @@ function generatePassword(){
                         
                                         } 
                                         if    ( symbols===true &&  pwdCriteria.pwdLength < passwordlength ) {
-                                                                    var sym = pwdCriteria.pwdSymbols[Math.floor(Math.random()*11)]
+                                                                    var sym = pwdCriteria.pwdSymbols[Math.floor(Math.random()*10)]
                                                                     result = result + sym; 
                                                                     pwdCriteria.pwdLength ++;
                                             
