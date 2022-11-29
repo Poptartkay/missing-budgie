@@ -14,7 +14,7 @@ var pwdCriteria = {
     pwdNumber: ["0","1","2","3","4","5","6","7","8","9"]
 }
 
-// Write password to the #password input
+// This is the password button function 
 function writePassword() {
   var password = generatePassword();
   var passwordText = document.querySelector("#password");
@@ -24,9 +24,8 @@ function writePassword() {
 
 }
 
-// Add event listener to generate button
+
 generateBtn.addEventListener("click", writePassword);
-// console.log("writePassword");
 
 function generatePassword(){
     var lowercase;
