@@ -1,6 +1,7 @@
 // Assignment Code
 var generateBtn = document.querySelector("#generate");
 
+// these are the parent Arrays that will have a child variable attached
 var pwdCriteria = {
     pwdLength: 0,
 
@@ -26,7 +27,7 @@ function writePassword() {
 
 
 generateBtn.addEventListener("click", writePassword);
-
+// these are the child variables that will attach to the parent
 function generatePassword(){
     var lowercase;
     var uppercase;
@@ -92,7 +93,7 @@ function generatePassword(){
                     }
                 }
                 return result;
-                
+                //text for prompt window
                 function promptwindow(){
                      lowercase = confirm("Do you want to use lowercase?");
                      uppercase = confirm("Do you want to use uppercase?");

@@ -29,7 +29,9 @@ WHEN the password is generated
 THEN the password is either displayed in an alert or written to the page
 
 # Description of the Lesson 
-The point of this Challenge is to 
+The point of this Challenge is to present to the user a password generator that can a lot a password with a length between 8-128
+as well as special characters and number, and upper and lower case letters. We also showed prompts in case the User didn't use the 
+criteria given.
 
 ### Reflection 
 What I learned most during this challenge was how to properly add functions to our variables
@@ -39,7 +41,7 @@ If I could do anything differently I would just make code look a bit cleaner.
 ## LINKS
 This is the link to the repo - https://github.com/Poptartkay/missing-budgie
 
-This is the link to the Live URL - 
+This is the link to the Live URL - https://poptartkay.github.io/missing-budgie/
 
 
 ## ScreenShots
