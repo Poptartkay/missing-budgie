@@ -9,7 +9,7 @@ var pwdCriteria = {
 
     pwdUppercase: ["A","B","C","D","E","F","G","H","I","J","K","L","M","N","O","P","Q","R","S","T","U","V","W","X","Y","Z"],
 
-    pwdsymbols: ["!","@","#","$","%","^","&","*","(",")"],
+    pwdSymbols: ["!","@","#","$","%","^","&","*","(",")"],
 
     pwdNumber: ["0","1","2","3","4","5","6","7","8","9"]
 }
@@ -66,25 +66,25 @@ function generatePassword(){
                                                 }
                                                 else{
                                                     if ( uppercase===true &&  pwdCriteria.pwdLength < passwordlength ) {
-                                                                        var upcase = pwdCriteria.pwdUppercase[Math.floor(Math.random()*26)]
+                                                                        var upcase = pwdCriteria.pwdUppercase[Math.floor(Math.random()*25)]
                                                                         result = result + upcase; 
-                                                                        pwdCriteria.pwdLength ++;
+                                                                        pwdCriteria.pwdLength++;
                                                 }
                                                 if    ( lowercase===true &&  pwdCriteria.pwdLength < passwordlength ) {
-                                                                        var lowcase = pwdCriteria.pwdLowercase[Math.floor(Math.random()*26)]
+                                                                        var lowcase = pwdCriteria.pwdLowercase[Math.floor(Math.random()*25)]
                                                                         result = result + lowcase; 
-                                                                        pwdCriteria.pwdLength ++;
+                                                                        pwdCriteria.pwdLength++;
                                             }
                                             if ( number===true &&  pwdCriteria.pwdLength < passwordlength ) {
-                                                                            var num = pwdCriteria.pwdNumber[Math.floor(Math.random()*10)]
+                                                                            var num = pwdCriteria.pwdNumber[Math.floor(Math.random()*9)]
                                                                             result = result + num; 
-                                                                            pwdCriteria.pwdLength ++;
+                                                                            pwdCriteria.pwdLength++;
                         
                                         } 
                                         if    ( symbols===true &&  pwdCriteria.pwdLength < passwordlength ) {
-                                                                    var sym = pwdCriteria.pwdSymbols[Math.floor(Math.random()*10)]
+                                                                    var sym = pwdCriteria.pwdSymbols[Math.floor(Math.random()*9)]
                                                                     result = result + sym; 
-                                                                    pwdCriteria.pwdLength ++;
+                                                                    pwdCriteria.pwdLength++;
                                             
                                     }
                                 }
